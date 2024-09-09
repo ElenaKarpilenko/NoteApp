@@ -1,4 +1,4 @@
-package com.example.noteapp.ui.fragment
+package com.example.noteapp.ui.fragment.on_board
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,6 +11,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.noteapp.R
 import com.example.noteapp.databinding.FragmentOnBoardBinding
 import com.example.noteapp.ui.adapter.OnBoardAdapter
+import com.example.noteapp.utils.SharedPreference
 
 class OnBoardFragment : Fragment() {
 
@@ -29,9 +30,11 @@ class OnBoardFragment : Fragment() {
         initialize()
         setupListener()
         btnGetStarted()
+        openHome()
     }
     private fun initialize() {
         binding.viewPager2.adapter = OnBoardAdapter(this@OnBoardFragment)
+        SharedPreference.unit(requireContext())
     }
 
 
@@ -39,6 +42,11 @@ class OnBoardFragment : Fragment() {
         binding.tvSend.setOnClickListener {
             if (currentItem < 3) {
                 setCurrentItem(currentItem + 2, true)
+            }
+        }
+        binding.btnStart.setOnClickListener {
+            if (binding.viewPager2.currentItem == 2) {
+                findNavController().navigate(R.id.noteFragment)
             }
         }
     }
@@ -67,5 +75,7 @@ class OnBoardFragment : Fragment() {
             }
         })
     }
-
+    private fun openHome() {
+        SharedPreference.isOnBoardShown = true
+    }
 }
