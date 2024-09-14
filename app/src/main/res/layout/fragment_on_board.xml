@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.fragment.onboard.OnBoardFragment">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tv_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="19dp"
+        android:text="Пропустить"
+        android:textColor="@color/orange"
+        android:textStyle="bold" />
+
+    <TextView
+        android:text="Начать"
+        android:id="@+id/tv_start"
+        android:textSize="24sp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="60dp"
+        android:backgroundTint="#FB8C00"
+        android:layout_width="240dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="40dp"
+        android:padding="16dp"
+        android:layout_gravity="bottom|center"
+        android:layout_height="wrap_content"/>
+
+</FrameLayout>
