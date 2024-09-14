@@ -30,7 +30,7 @@ class OnBoardViewPagerFragment : Fragment() {
             0 -> {
                 tvTitle.text = "Удобство"
                 tvOn.text = "Создавайте заметки в два клика! Записывайте мысли, идеи и важные задачи мгновенно"
-                lottie.setAnimation(R.raw.lottie2)
+                lottie.setAnimation(R.raw.lottie1)
             }
 
             1 -> {
@@ -44,7 +44,7 @@ class OnBoardViewPagerFragment : Fragment() {
             2 -> {
                 tvTitle.text = "Синхронизация"
                 tvOn.text = "Синхронизация на всех устройствах. Доступ к записям в любое время и в любом месте"
-                lottie.setAnimation(R.raw.lottie2)
+                lottie.setAnimation(R.raw.lottie3)
                 circle1.setImageResource(R.drawable.ic_style_white)
                 circle2.setImageResource(R.drawable.ic_style_white)
                 circle3.setImageResource(R.drawable.ic_orange_point)
