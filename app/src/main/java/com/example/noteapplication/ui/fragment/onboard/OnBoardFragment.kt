@@ -10,9 +10,12 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.noteapplication.R
 import com.example.noteapplication.databinding.FragmentOnBoardBinding
 import com.example.noteapplication.ui.adapter.OnBoardViewPagerAdapter
+import com.example.noteapplication.utils.SharedPreferenceHelper
 
 class OnBoardFragment : Fragment() {
     private lateinit var binding: FragmentOnBoardBinding
+    private lateinit var sharedPreferenceHelper: SharedPreferenceHelper
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -25,6 +28,12 @@ class OnBoardFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initialize()
         setUpListener()
+
+//        if (!sharedPreferenceHelper.isOnBoardingComplete()) {
+//            sharedPreferenceHelper.setOnBoardingComplete(true)
+//        } else {
+//            findNavController().navigate(R.id.noteFragment)
+//        }
     }
 
     private fun initialize() {

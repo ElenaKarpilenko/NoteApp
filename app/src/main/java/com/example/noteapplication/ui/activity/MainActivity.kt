@@ -23,9 +23,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var sharedPreferenceHelper: SharedPreferenceHelper
-    private lateinit var recyclerView: RecyclerView
-    private var isLinearLayout = true // Флаг для отслеживания текущего макета
-
 
     private lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
