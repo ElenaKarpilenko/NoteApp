@@ -17,8 +17,16 @@ class SharedPreferenceHelper(context: Context) {
     fun isOnBoardingComplete(): Boolean {
         return sharedPreferences.getBoolean(SHOWED, false)
     }
+    fun setIsGridLayout(isGridLayout: Boolean) {
+        sharedPreferences.edit().putBoolean(IS_GRID_LAYOUT, isGridLayout).apply()
+    }
+
+    fun getIsGridLayout(): Boolean {
+        return sharedPreferences.getBoolean(IS_GRID_LAYOUT, false)
+    }
 
     companion object{
         const val SHOWED = "SHOWED"
+        const val IS_GRID_LAYOUT = "IS_GRID_LAYOUT"
     }
 }
