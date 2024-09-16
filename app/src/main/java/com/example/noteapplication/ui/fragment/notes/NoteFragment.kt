@@ -34,6 +34,7 @@ class NoteFragment : Fragment() {
         getData()
     }
 
+
     private fun initialize() {
         binding.rvNote.apply {
             layoutManager = LinearLayoutManager(requireContext())
