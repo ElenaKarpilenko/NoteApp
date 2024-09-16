@@ -10,19 +10,22 @@
 
     <TextView
         android:id="@+id/item_title"
-        android:layout_width="wrap_content"
+        android:layout_width="156dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/light_gray"
+        android:textColor="@color/white"
         android:textSize="20sp"
+
+        android:textStyle="bold"
         tools:text="Title" />
 
     <TextView
         android:id="@+id/item_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:textColor="@color/light_gray"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white"
         android:textSize="20sp"
+        android:textStyle="italic"
         tools:text="Description" />
 
     <TextView

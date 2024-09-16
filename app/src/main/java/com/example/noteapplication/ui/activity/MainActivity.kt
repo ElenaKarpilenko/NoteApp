@@ -1,12 +1,20 @@
 package com.example.noteapplication.ui.activity
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.button.MaterialButton
+
+import androidx.activity.enableEdgeToEdge
+
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+
 import com.example.noteapplication.R
 import com.example.noteapplication.databinding.ActivityMainBinding
 import com.example.noteapplication.utils.SharedPreferenceHelper
@@ -15,6 +23,9 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var sharedPreferenceHelper: SharedPreferenceHelper
+    private lateinit var recyclerView: RecyclerView
+    private var isLinearLayout = true // Флаг для отслеживания текущего макета
+
 
     private lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
