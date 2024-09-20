@@ -1,7 +1,5 @@
-package com.example.noteapp.ui.fragment
+package com.example.noteapp.ui.fragment.on_board
 
-import android.graphics.Color
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater

@@ -7,12 +7,17 @@
 
     <fragment
         android:id="@+id/onBoardFragment"
-        android:name="com.example.noteapp.ui.fragment.OnBoardFragment"
+        android:name="com.example.noteapp.ui.fragment.on_board.OnBoardFragment"
         android:label="fragment_on_board"
         tools:layout="@layout/fragment_on_board" />
     <fragment
         android:id="@+id/onBoardPagingFragment"
-        android:name="com.example.noteapp.ui.fragment.OnBoardPagingFragment"
+        android:name="com.example.noteapp.ui.fragment.on_board.OnBoardPagingFragment"
         android:label="fragment_on_board_paging"
         tools:layout="@layout/fragment_on_board_paging" />
+    <fragment
+        android:id="@+id/noteFragment"
+        android:name="com.example.noteapp.ui.fragment.note.NoteFragment"
+        android:label="fragment_note"
+        tools:layout="@layout/fragment_note" />
 </navigation>
