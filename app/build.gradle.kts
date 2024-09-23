@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("androidx.navigation.safeargs")
     id("kotlin-kapt")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -48,6 +49,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -55,19 +57,21 @@ dependencies {
     implementation("com.tbuonomo:dotsindicator:4.3")
 
     //Navigation Components
-    val navVersion = "2.7.7"
-
-    // Kotlin
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
-    // Lottie
-    val lottieVersion = "6.4.0"
-    implementation (libs.lottie)
+    //Lottie
+    implementation(libs.lottie)
 
     // Room
-    val roomVersion = "2.6.1"
     implementation(libs.androidx.room.ktx)
     kapt(libs.androidx.room.compiler)
 
+    //Firebase
+    implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
+    implementation("com.google.firebase:firebase-analytics")
+
+    //Auth
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.android.gms:play-services-auth:21.1.1")
 }
